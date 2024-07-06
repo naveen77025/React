@@ -1,0 +1,30 @@
+{
+  "name": "inception",
+  "version": "1.0.0",
+  "description": "This is react from scratch",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/naveen77025/React.git"
+  },
+  "keywords": [],
+  "author": "Naveen Kumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/naveen77025/React/issues"
+  },
+  "homepage": "https://github.com/naveen77025/React#readme",
+  "devDependencies": {
+    "parcel": "^2.12.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "browserslist":[
+    "last 10 versions"
+  ]
+}

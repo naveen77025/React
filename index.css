@@ -46,3 +46,9 @@
     width: 100%;
     align-content: center;
 }
+
+.top-rated-button {
+    cursor: pointer;
+    border-radius: 10%;
+    box-shadow: inset;
+}

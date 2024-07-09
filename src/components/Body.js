@@ -1,13 +1,19 @@
 import { resList } from "../utils/constants";
 import { ResCard } from "./ResCard";
+import {useState} from "react";
 
 const Body = () => {
+    const [restaurantList, setRestaurantlist]= useState(resList);
+    console.log(restaurantList);
     return (
         <div className="body-container">
-            <h3 className="search">Search</h3>
+            <button className="top-rated-button" onClick={()=>{
+                const filteredRes = restaurantList.filter(res => res.info.rating.aggregate_rating>=4);
+                setRestaurantlist(filteredRes);
+            }}>Top Rated Restaurants</button>
             <div className="card-container">
             {
-                resList.map(res => <ResCard key={res.info.resId} resData={res}/>)
+                restaurantList.map(res => <ResCard key={res.info.resId} resData={res}/>)
             }
             </div>
         </div>

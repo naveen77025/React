@@ -1,53 +1,4 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-
-
-const Header= () => {
-    return (
-        <div className="Header-component">
-            <img className="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQhq5rZN9TJAHFwnhgwyBYZa73GF6Xbx6Q-Q&usqp=CAU"/>
-            <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Cart</li>
-                <li>My Account</li>
-            </ul>
-        </div>
-    )
-};
-
-const Body = () => {
-    return (
-        <div className="body-container">
-            <h3 className="search">Search</h3>
-            <div className="card-container">
-            {
-                resList.map(res => <ResCard key={res.info.resId} resData={res}/>)
-            }
-            </div>
-        </div>
-    )
-};
-
-const ResCard = (props) =>{
-    const {resData}=props;
-    console.log(resData.info);
-    const {name, rating,cuisine,distance,image,cft}=resData?.info;
-    const {aggregate_rating}=rating;
-    const cuisineList= cuisine.map(x=>x.name).join(", ");
-    return (
-        <div className="res-card">
-            <img className="res-image" src={image.url}/>
-            <h3>{name}</h3>
-            <h4>{aggregate_rating} ⭐</h4>
-            <h4>{cuisineList}</h4>
-            <h4>{distance}</h4>
-            <h4>{cft.text}</h4>
-        </div>
-    )
-};
-
-const resList=[
+export const resList=[
     {
         "type": "restaurant",
         "info": {
@@ -443,16 +394,7 @@ const resList=[
         "isDisabled": false,
         "bottomContainers": []
     }
-]
+];
 
-const AppContainer = () => {
-    return (
-        <div>
-            <Header/>
-            <Body/>
-        </div>
-    )
-};
+export const LOGO_URL="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQhq5rZN9TJAHFwnhgwyBYZa73GF6Xbx6Q-Q&usqp=CAU";
 
-const root= ReactDOM.createRoot(document.getElementById("root"));
-root.render(<AppContainer/>);

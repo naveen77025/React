@@ -1,19 +1,20 @@
-
+import { RES_URL } from "../utils/constants";
 
 export const ResCard = (props) =>{
     const {resData}=props;
-    console.log(resData.info);
-    const {name, rating,cuisine,distance,image,cft}=resData?.info;
-    const {aggregate_rating}=rating;
-    const cuisineList= cuisine.map(x=>x.name).join(", ");
+    //console.log(resData.info);
+    const {name, avgRating,cuisines,lastMileTravel,cloudinaryImageId,costForTwo,sla}=resData;
+    const deliveryTime=sla.deliveryTime;
+    const cuisineList= cuisines.join(", ");
     return (
         <div className="res-card">
-            <img className="res-image" src={image.url}/>
+            <img className="res-image" src={RES_URL+cloudinaryImageId}/>
             <h3>{name}</h3>
-            <h4>{aggregate_rating} ⭐</h4>
+            <h4>{avgRating} ⭐</h4>
+            <h4>{lastMileTravel}</h4>
+            <h4>{costForTwo}</h4>
+            <h4>delivery in {deliveryTime} mins</h4>
             <h4>{cuisineList}</h4>
-            <h4>{distance}</h4>
-            <h4>{cft.text}</h4>
         </div>
     )
 };

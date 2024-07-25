@@ -52,3 +52,14 @@
     border-radius: 10%;
     box-shadow: inset;
 }
+
+.res-filter {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.searchResBtn{
+    margin: 0px 10px;
+    border-radius: 15%;
+}

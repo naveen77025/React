@@ -1,9 +1,11 @@
+import { Link } from "react-router-dom";
 import { RES_URL } from "../utils/constants";
+import Menu from "./Menu";
 
 export const ResCard = (props) =>{
     const {resData}=props;
     //console.log(resData.info);
-    const {name, avgRating,cuisines,lastMileTravel,cloudinaryImageId,costForTwo,sla}=resData;
+    const {id,name, avgRating,cuisines,lastMileTravel,cloudinaryImageId,costForTwo,sla}=resData;
     const deliveryTime=sla.deliveryTime;
     const cuisineList= cuisines.join(", ");
     return (

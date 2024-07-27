@@ -63,3 +63,81 @@
     margin: 0px 10px;
     border-radius: 15%;
 }
+
+/* Styles for the main menu container */
+.menu-div {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+.menu-div h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.menu-div p {
+    font-size: 1em;
+    margin: 5px 0;
+    color: #666;
+}
+
+/* Styles for the menu list */
+.Menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Styles for each menu type */
+.menu-types {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.menu-types h1 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Styles for each category */
+.categoryWiseFoodItem {
+    margin-bottom: 20px;
+}
+
+/* Styles for each food item */
+.foodItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #f9f9f9;
+    margin-bottom: 10px;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.foodItem:hover {
+    background: #e0e0e0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.foodItem h3 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.foodItem h3:last-of-type {
+    font-size: 1.1em;
+    color: #666;
+}
+

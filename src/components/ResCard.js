@@ -12,7 +12,7 @@ export const ResCard = (props) =>{
         <div className="m-4 p-4 w-[250px] bg-amber-100 rounded-lg shadow-lg hover:bg-amber-200 ">
             <img className="rounded-lg text-lg shadow-lg" src={RES_URL+cloudinaryImageId}/>
             <h3 className="font-bold py-2">{name}</h3>
-            <h4 className="inline-block bg-yellow-300 text-white px-2 py-1 rounded-full text-sm font-semibold mr-2">{avgRating} ⭐</h4>
+            <h4 className={`inline-block ${avgRating>3.9?'bg-yellow-300': 'bg-red-400'} text-white px-2 py-1 rounded-full text-sm font-semibold mr-2`}>{avgRating} ⭐</h4>
             <h4 className="inline-block text-sm">{lastMileTravel}</h4>
             <h4 className="block font-medium">{costForTwo}</h4>
             <h4 className="block font-medium">delivery in {deliveryTime} mins</h4>
